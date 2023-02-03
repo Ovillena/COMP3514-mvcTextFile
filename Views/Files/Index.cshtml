@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Text Files";
+}
+
+<h1>@ViewData["Title"]</h1>
+<ul>
+@for(int i = 0; i<ViewBag.TextFiles.Length; i++)
+{
+    <li>
+        <a asp-controller="Files" asp-action="Content" asp-route-id=@i>@ViewBag.TextFiles[i]</a>
+    </li>}
+</ul>
+
+
+
